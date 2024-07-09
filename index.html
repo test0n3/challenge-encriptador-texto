@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Challenge - Encriptador de Texto</title>
+  </head>
+  <body>
+    <header>
+      <h1></h1>
+    </header>
+    <main>
+      <section class="section" id="left-section">
+        <textarea
+          name="input-text"
+          id="input-text"
+          placeholder="Ingrese el texto aquí"
+        ></textarea>
+        <div class="advice" id="input-advice">
+          <div id="attention-icon"><p>!</p></div>
+          <p>Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="button-container" id="input-buttons">
+          <button class="buttons" id="cypher">Cifrar</button
+          ><button class="buttons" id="decypher">Decifrar</button>
+        </div>
+      </section>
+      <section class="section" id="right-section">
+        <article class="article" id="result-placeholder">
+          <img src="./images/placeholder.png" alt="result placeholder" />
+          <p id="result-title">Ningún mensaje fue encontrado</p>
+          <p id="result-text">
+            Ingresa el texto que desees encriptar o desencriptar.
+          </p>
+        </article>
+        <article class="article" id="result"></article>
+        <div class="button-container" id="result-buttons">
+          <button class="buttons" id="copy">Copiar</button>
+        </div>
+      </section>
+    </main>
+    <footer><p>&copy; 2024 - Carlos Ayala - Perú</p></footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
