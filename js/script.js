@@ -10,11 +10,6 @@ const textValues = { e: "enter", i: "imes", a: "ai", o: "ober", u: "ufat" };
 // Cifrado de texto
 cypherButton.addEventListener("click", () => {
   let text = inputText.value;
-  // if (isIncorrectInput(text)) {
-  //   alert("Solo se permiten letras minúsculas y sin acentos");
-  //   return;
-  // }
-
   let cypherKeys = new RegExp(Object.keys(textValues).join("|"), "g");
   let newResult = text.replace(cypherKeys, (matched) => {
     return textValues[matched];
@@ -25,12 +20,6 @@ cypherButton.addEventListener("click", () => {
 // decifrado de texto
 decypherButton.addEventListener("click", () => {
   let text = inputText.value;
-
-  // if (isIncorrectInput(text)) {
-  //   alert("Solo se permiten letras minúsculas y sin acentos");
-  //   return;
-  // }
-
   let result = text
     .replace(/enter/g, "e")
     .replace(/imes/g, "i")
@@ -48,12 +37,10 @@ copyButton.addEventListener("click", () => {
 // mostrar resultado de cifrado o descifrado
 function displayResult(text) {
   let resultPlaceholder = document.getElementById("result-placeholder");
-  let resultButtons = document.getElementById("result-buttons");
+  let resultSpace = document.getElementById("result-space");
   resultPlaceholder.style.display = "none";
-  resultDisplay.style.display = "block";
-  resultButtons.style.display = "block";
-  resultDisplay.innerHTML = "";
-  resultDisplay.appendChild(document.createElement("p")).textContent = text;
+  resultDisplay.style.display = "flex";
+  resultSpace.innerText = text;
 }
 
 // Ajuste de altura del textarea
@@ -62,7 +49,3 @@ inputText.addEventListener("input", () => {
   inputText.style.height = inputText.scrollHeight + "px";
 });
 
-// validación de texto ingresado
-function isIncorrectInput(text) {
-  return /[A-Z]/.test(text);
-}
