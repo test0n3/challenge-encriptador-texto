@@ -1,0 +1,37 @@
+body {
+  padding: 40px;
+}
+
+header {
+  padding: 2.5rem;
+}
+
+#left-section {
+  margin-top: 200px;
+  margin-bottom: 64px;
+}
+
+#input-text {
+  min-height: 570px;
+}
+
+#right-section {
+  margin: 0;
+}
+
+.button-container {
+  flex-direction: row;
+}
+
+.buttons {
+  max-width: 332px;
+}
+
+#cypher {
+  margin-bottom: 0;
+}
+
+#copy {
+  max-width: none;
+  width: 100%;
+}
